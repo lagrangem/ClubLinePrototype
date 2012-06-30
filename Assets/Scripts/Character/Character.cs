@@ -16,7 +16,7 @@ public class Character : MonoBehaviour {
 	}
 	private int _value;
 
-	enum CharacterType
+	public enum CharacterType
 	{
 		SPORTY,
 		HIPSTER,
@@ -42,34 +42,34 @@ public class Character : MonoBehaviour {
 		string returnString;
 		switch(charType)
 		{
-			case SPORTY:
+			case CharacterType.SPORTY:
 				returnString = "";
 				break;
-			case HIPSTER:
+			case CharacterType.HIPSTER:
 				returnString = "";
 				break;
-			case PREPPY:
+			case CharacterType.PREPPY:
 				returnString = "";				
 				break;
-			case ROCKER:
+			case CharacterType.ROCKER:
 				returnString = "";				
 				break;
-			case GIRLY:
+			case CharacterType.GIRLY:
 				returnString = "";				
 				break;
-			case JOCK:
+			case CharacterType.JOCK:
 				returnString = "";				
 				break;
-			case BRO:
+			case CharacterType.BRO:
 				returnString = "";				
 				break;
-			case NERD:
+			case CharacterType.NERD:
 				returnString = "";
 				break;
-			case PUNK:
+			case CharacterType.PUNK:
 				returnString = "";
 				break;
-			case MEATHEAD:
+			case CharacterType.MEATHEAD:
 				returnString = "";			
 				break;
 			default:
@@ -99,7 +99,7 @@ public class Character : MonoBehaviour {
 	
 	public List<Effect> GetEffectsByTrigger(Effect.Trigger trigger)
 	{
-		List<Effect> returnList;
+		List<Effect> returnList = new List<Effect>();
 		foreach(Effect effect in _effectList)
 		{
 			if(	effect.TriggerType == trigger)

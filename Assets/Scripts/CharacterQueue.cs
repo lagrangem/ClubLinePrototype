@@ -40,7 +40,7 @@ public class CharacterQueue  {
 	{
 		get{ return _lastCharacterCollected;}
 	}
-	private Character _LastCharacterCollected;
+	private Character _lastCharacterCollected;
 	
 	public void Update()
 	{
@@ -53,7 +53,7 @@ public class CharacterQueue  {
 		_maxLineSize = maxSize;
 		_line = line;
 		_startingSize = line.Count;
-		_LastCharacterCollected = null;
+		_lastCharacterCollected = null;
 		
 	}
 	
@@ -62,7 +62,7 @@ public class CharacterQueue  {
 		_line = new Queue<Character>();
 		_maxLineSize = maxSize;
 		_startingSize = 0;
-		_LastCharacterCollected = null;
+		_lastCharacterCollected = null;
 	}
 	
 	public CharacterQueue(int maxSize = 10000, params Character[] line)
@@ -73,11 +73,11 @@ public class CharacterQueue  {
 			_line.Enqueue(newChar);
 		}
 		_startingSize = _line.Count;
-		_LastCharacterCollected = null;
+		_lastCharacterCollected = null;
 	}
 	
 	
-	public boolean AddToEndOfLine(Character newChar)
+	public bool AddToEndOfLine(Character newChar)
 	{
 		if(newChar != null && Length < MaxLineSize)
 		{
@@ -92,7 +92,7 @@ public class CharacterQueue  {
 	public Character CollectFrontOfLine()
 	{
 		Character front = _line.Dequeue();
-		_LastCharacterCollected = front;
+		_lastCharacterCollected = front;
 		return front;
 	}
 	

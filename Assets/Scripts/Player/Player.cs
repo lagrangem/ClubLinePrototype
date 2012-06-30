@@ -70,7 +70,7 @@ public class Player {
 			List<Effect> effectList = character.GetEffectsByTrigger(Effect.Trigger.ScoreBonus);
 			foreach (Effect bonus in effectList)
 			{
-				returnScore += bonus.GetBonusScore(_collection);
+				//returnScore += bonus.GetBonusScore(_collection);
 			}
 		
 		}
@@ -80,6 +80,7 @@ public class Player {
 		//do work from effects	
 		}
 		
+		return 0;
 	}
 	
 	
