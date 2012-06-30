@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private QueueManager _queueMgr;
 	
-	enum GameState
+	public enum GameState
 	{
 		TURN_START,
 		WAITING_FOR_ACTION,
