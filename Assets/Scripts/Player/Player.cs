@@ -12,8 +12,6 @@ public class Player {
 	//Taskmanager for applying things to a player
 	private TaskManager _taskMgr;
 	
-	
-	
 	//player's current score
 	//should be updated by CalculateScore
 	public int Score
@@ -52,17 +50,6 @@ public class Player {
 	}
 	private List<Action> _usedActionList;		
 	
-	public Player()
-	{
-		_score = 0;
-		_collection = new List<Character>();
-		_playerEffectCollection = new List<Effect>();
-		_playerActionList = new List<Action>();
-		_usedActionList = new List<Action>();
-		
-		
-	}
-	
 	
 	//main update loop of the player class
 	public virtual void Update()
@@ -81,19 +68,18 @@ public class Player {
 		foreach(Character character in _collection)
 		{
 			List<Effect> effectList = character.GetEffectsByTrigger(Effect.Trigger.ScoreBonus);
-
-//			foreach (Effect bonus in effectList)
-//			{
-//				//returnScore += bonus.GetBonusScore(_collection);
-//			}
+			foreach (Effect bonus in effectList)
+			{
+				returnScore += bonus.GetBonusScore(_collection);
+			}
 		
 		}
 		
-//		foreach(Effect effect in _playerEffectCollection)
-//		{
-//		//do work from effects	
-//		}
-		return 0;
+		foreach(Effect effect in _playerEffectCollection)
+		{
+		//do work from effects	
+		}
+		
 	}
 	
 	

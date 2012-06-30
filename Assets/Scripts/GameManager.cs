@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private QueueManager _queueMgr;
 	
-	public enum GameState
+	enum GameState
 	{
 		TURN_START,
 		WAITING_FOR_ACTION,
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		_queueMgr = new QueueManager();
+			
 	}
 	
 	// Update is called once per frame

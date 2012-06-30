@@ -23,7 +23,7 @@ public class Effect  {
 		get{return _trigger;}
 		set{_trigger = value;}
 	}
-	private Trigger _trigger;
+	private TriggerType _trigger;
 	
 	public List<Task> TaskList
 	{
@@ -32,7 +32,7 @@ public class Effect  {
 	}
 	private List<Task> _taskList;
 	
-	public virtual void ApplyEffect() {}
+	virtual void ApplyEffect() {}
 	
 	public Effect(List<Task> tasks)
 	{

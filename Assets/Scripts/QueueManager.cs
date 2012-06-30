@@ -17,32 +17,26 @@ public class QueueManager {
 	}
 	private CharacterQueue _mainLine;
 	
-	public TaskManager QueueTaskMgr
-	{
-		get{return _queueTaskMgr;}
-	}
 	private TaskManager _queueTaskMgr;
-	
 	
 	public QueueManager(params Character[] chars)
 	{
 		Queue<Character> returnQ = new Queue<Character>();
 		foreach (Character character in chars)
 			returnQ.Enqueue(character);
-		init (returnQ);
+		initQueue(returnQ);
 	}
 	
 	public QueueManager(Queue<Character> charQ)
 	{
-		init(charQ);
+		initQueue(charQ);
 	}
 	
-	public void init(Queue<Character> charQ)
+	public void initQueue(Queue<Character> charQ)
 	{
 		_queueTaskMgr = new TaskManager();
-		_mainLine = new CharacterQueue(charQ);		
+		_mainLine = new CharacterQueue(charQ);
 	}
-	
 	public void Update()
 	{
 		_mainLine.Update();

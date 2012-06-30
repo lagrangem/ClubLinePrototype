@@ -55,12 +55,12 @@ public class Action : MonoBehaviour {
 	
 	
 	// Use this for initialization
-	public virtual void Start () {
+	virtual void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	public virtual void Update () {
+	virtual void Update () {
 	
 	}
 		
