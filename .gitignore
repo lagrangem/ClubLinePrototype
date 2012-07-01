@@ -14,6 +14,7 @@ build/*
 xcuserdata
 Library/cache/*
 Library/previews/*
+Temp/*
 # svn & cvs
 .svn
 CVS
