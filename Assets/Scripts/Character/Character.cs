@@ -14,7 +14,7 @@ public class Character : MonoBehaviour {
 		get{ return _value;}
 		set{_value = value;}
 	}
-	private int _value;
+	private int _value = 1;
 
 	public enum CharacterType
 	{
@@ -35,7 +35,7 @@ public class Character : MonoBehaviour {
 		get{ return _type;}
 		set{ _type = value;}
 	}
-	private CharacterType _type;
+	private CharacterType _type = CharacterType.SPORTY;
 	
 	string getPrefabName(CharacterType charType)
 	{
@@ -95,7 +95,7 @@ public class Character : MonoBehaviour {
 	{
 		get{return _effectList;}
 	}
-	private List<Effect> _effectList;
+	private List<Effect> _effectList = new List<Effect>();
 	
 	public List<Effect> GetEffectsByTrigger(Effect.Trigger trigger)
 	{
@@ -112,7 +112,7 @@ public class Character : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame

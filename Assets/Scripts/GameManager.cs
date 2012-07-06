@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 	{
 		get{ return _queueMgr;}
 	}
-	private QueueManager _queueMgr;
+	private QueueManager _queueMgr = new QueueManager(new Queue<Character>());
 	
 	public enum GameState
 	{

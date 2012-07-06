@@ -18,14 +18,14 @@ public class Player {
 	{
 		get{ return _score;}
 	}
-	private int _score;
+	private int _score = 0;
 	
 	//The players collection of characters (ie score pile)
 	public List<Character> Collection
 	{
 		get{ return _collection;}
 	}
-	private List<Character> _collection;
+	private List<Character> _collection = new List<Character>();
 	
 	// List of effects currently on player
 	// Effects for calculating score, and perhaps limiting actions.
@@ -33,7 +33,7 @@ public class Player {
 	{
 		get {return _playerEffectCollection;}
 	}
-	private List<Effect> _playerEffectCollection;
+	private List<Effect> _playerEffectCollection = new List<Effect>();
 	
 	
 	public List<Action> PlayerActionList
@@ -41,15 +41,14 @@ public class Player {
 		get{return _playerActionList;}
 		set{_playerActionList = value;}
 	}
-	private List<Action> _playerActionList;
+	private List<Action> _playerActionList = new List<Action>();
 
 	public List<Action> UsedActionList
 	{
 		get{return _usedActionList;}
 		set{_usedActionList = value;}
 	}
-	private List<Action> _usedActionList;		
-	
+	private List<Action> _usedActionList = new List<Action>();		
 	
 	//main update loop of the player class
 	public virtual void Update()

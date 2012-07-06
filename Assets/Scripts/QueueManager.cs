@@ -17,7 +17,7 @@ public class QueueManager {
 	}
 	private CharacterQueue _mainLine;
 	
-	private TaskManager _queueTaskMgr;
+//	private TaskManager _queueTaskMgr = new TaskManager();
 	
 	public QueueManager(params Character[] chars)
 	{
@@ -34,7 +34,6 @@ public class QueueManager {
 	
 	public void initQueue(Queue<Character> charQ)
 	{
-		_queueTaskMgr = new TaskManager();
 		_mainLine = new CharacterQueue(charQ);
 	}
 	public void Update()

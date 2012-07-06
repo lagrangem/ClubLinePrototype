@@ -20,20 +20,6 @@ public class Task {
 		CharacterQueue,
 	};
 	
-	public CharacterQueue TargetQueue
-	{
-		get{return _targetQueue;}
-		set{_targetQueue = value;}
-	}
-	private CharacterQueue _targetQueue;
-	
-	public Player TargetPlayer
-	{
-		get {return _targetPlayer;}
-		set {_targetPlayer = value;}
-	}
-	private Player _targetPlayer;
-	
 	
 	public TargetType Type
 	{
@@ -41,7 +27,12 @@ public class Task {
 		set { _type = value;}
 	}
 	private TargetType _type;
-
+	
+	public Task(TargetType type)
+	{
+		_type = type;
+	}
+	
 	public virtual bool DoTask()
 	{
 		return true;
