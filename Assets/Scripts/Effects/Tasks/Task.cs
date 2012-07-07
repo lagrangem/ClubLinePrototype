@@ -18,7 +18,23 @@ public class Task {
 		PlayerCollection,
 		BouncerCollection,
 		CharacterQueue,
+		Character,
 	};
+	
+	public bool Valid
+	{
+		get{return _valid;}
+		set{_valid = value;}
+	}
+	private bool _valid = true;
+	
+	public bool TaskHasRun
+	{
+		get{return _complete;}
+		set{_complete = value;}
+	}
+	private bool _complete = false;
+	
 	
 	
 	public TargetType Type
