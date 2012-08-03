@@ -12,6 +12,7 @@ public class Effect  {
 	
 	public enum Trigger
 	{
+		Played,
 		OnCollection,
 		Position,
 		OverTime,
@@ -32,15 +33,15 @@ public class Effect  {
 	}
 	private List<Task> _taskList;
 	
-	public virtual void ApplyEffect() {}
-	
-	public Effect(List<Task> tasks)
+	public virtual void ApplyEffect() 
 	{
-		_taskList = tasks;
+		for(int i = 0; i < _taskList.Count; i++)
+			_taskList[0].DoTask();
 	}
-	public Effect(params Task[] tasks)
+	
+	public Effect(Trigger type)
 	{
-		_taskList = new List<Task>(tasks);	
+		_trigger = type;
 	}
 	
 }
