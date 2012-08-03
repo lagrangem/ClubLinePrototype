@@ -30,4 +30,5 @@ public class ChangeCharacterValueTask : CharacterTask {
 		return true;
 	}
 	
+	
 }
