@@ -91,9 +91,14 @@ public class CharacterQueue  {
 	
 	public Character CollectFrontOfLine()
 	{
-		Character front = _line.Dequeue();
-		_lastCharacterCollected = front;
-		return front;
+		if(_line.Count > 0)
+		{
+			Character front = _line.Dequeue();
+			_lastCharacterCollected = front;
+			return front;
+		}
+		else
+			return null;
 	}
 	
 	public bool MoveCharacter(int characterPos, int movePos)
@@ -128,6 +133,14 @@ public class CharacterQueue  {
 	}
 	
 	public bool RemoveCharacters(params int[] charPos)
+	{
+		List<int> returnList = new List<int>();
+		foreach(int pos in charPos)
+			returnList.Add(pos);
+		return RemoveCharacters(returnList);	
+	}
+	
+	public bool RemoveCharacters(List<int> charPos)
 	{
 		//if any char pos is invalid just bail
 		foreach(int pos in charPos)
