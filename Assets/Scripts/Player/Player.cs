@@ -35,7 +35,12 @@ public class Player {
 	}
 	private List<Effect> _playerEffectCollection = new List<Effect>();
 	
-	
+	public int CollectsMade
+	{
+		get{return _collectsMade;}
+		set{_collectsMade = value;}
+	}
+	private int _collectsMade = 0;
 	public List<Action> PlayerActionList
 	{
 		get{return _playerActionList;}
