@@ -50,11 +50,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-			
+		print("Game Starting");
+		
+		print("Queueing Charactors (in code)");
+		Queue<Character> charQueue = new Queue<Character>();
+		charQueue.Enqueue(new Character(Character.CharacterType.JOCK));
+		charQueue.Enqueue(new Character(Character.CharacterType.SPORTY));
+		charQueue.Enqueue(new Character(Character.CharacterType.HIPSTER));
+		charQueue.Enqueue(new Character(Character.CharacterType.GIRLY));
+
+		_queueMgr.initQueue(charQueue);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//_queueMgr.Update();
 	}
 }

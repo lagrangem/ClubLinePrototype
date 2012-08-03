@@ -43,10 +43,10 @@ public class Character : MonoBehaviour {
 		switch(charType)
 		{
 			case CharacterType.SPORTY:
-				returnString = "";
+				returnString = "BikiniChick";
 				break;
 			case CharacterType.HIPSTER:
-				returnString = "";
+				returnString = "ItGirl2";
 				break;
 			case CharacterType.PREPPY:
 				returnString = "";				
@@ -55,10 +55,10 @@ public class Character : MonoBehaviour {
 				returnString = "";				
 				break;
 			case CharacterType.GIRLY:
-				returnString = "";				
+				returnString = "ItGirl3";				
 				break;
 			case CharacterType.JOCK:
-				returnString = "";				
+				returnString = "AnimeWarrior";				
 				break;
 			case CharacterType.BRO:
 				returnString = "";				
@@ -85,6 +85,12 @@ public class Character : MonoBehaviour {
 		set { _characterPrefab = value;}
 	}
 	private GameObject _characterPrefab;
+	
+	public Character(CharacterType Type)
+	{
+		_type = Type;
+		_characterPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/CharacterPrefabs/" + getPrefabName(_type)));
+	}
 
 	public virtual void updateFromLine()
 	{
@@ -117,6 +123,12 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	    if(Input.GetButton("Fire1")) {
+        TapFunction();
+		}
+	}
 	
+	void TapFunction() {
+		print(_type.ToString());
 	}
 }

@@ -22,19 +22,21 @@ public class QueueManager {
 	public QueueManager(params Character[] chars)
 	{
 		Queue<Character> returnQ = new Queue<Character>();
-		foreach (Character character in chars)
+		foreach (Character character in chars){
 			returnQ.Enqueue(character);
+		}
 		initQueue(returnQ);
 	}
 	
 	public QueueManager(Queue<Character> charQ)
 	{
-		initQueue(charQ);
+		//initQueue(charQ);
 	}
 	
 	public void initQueue(Queue<Character> charQ)
 	{
 		_mainLine = new CharacterQueue(charQ);
+		_mainLine.OrderView(150);
 	}
 	public void Update()
 	{

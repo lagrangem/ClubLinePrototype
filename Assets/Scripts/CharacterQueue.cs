@@ -197,5 +197,15 @@ public class CharacterQueue  {
 		_line = returnQ;
 		return true;	
 	}
+	
+	public void OrderView(float Spacing)
+	{
+		float prevX = 0;
+		foreach(Character ch in _line)
+		{
+			ch.CharacterPrefab.transform.Translate(Vector3.right * prevX);
+			prevX += Spacing;
+		}
+	}
 }
 
